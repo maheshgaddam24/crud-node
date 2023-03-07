@@ -18,6 +18,12 @@
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
+    "@coreui/angular": "^4.3.16",
+    "@ng-bootstrap/ng-bootstrap": "^13.1.1",
+    "angular-off-canvas": "^0.1.4",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "offcanvas-bootstrap": "^2.5.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
