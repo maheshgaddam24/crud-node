@@ -14,8 +14,6 @@ export class AppComponent implements OnInit {
   createEmployeeFrom: FormGroup;
   updateEmployeeFrom: FormGroup;
   id: any;
-  name: string = "";
-  email: string = "";
   title = 'crud-node';
   constructor(
     private service: ApiService,
@@ -28,8 +26,8 @@ export class AppComponent implements OnInit {
       email: ['', [Validators.required]],
     });
     this.updateEmployeeFrom = this.formBuilder.group({
-      name: [`${this.name}`, [Validators.required]],
-      email: [`${this.email}`, [Validators.required]],
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required]],
     });
   }
 
@@ -58,8 +56,12 @@ export class AppComponent implements OnInit {
       centered: true,
     });
     this.id = employee.id;
-    this.name = employee.name;
-    this.email = employee.email;
+    let name = employee.name;
+    let email = employee.email;
+    this.updateEmployeeFrom = this.formBuilder.group({
+      name: [`${name}`, [Validators.required]],
+      email: [`${email}`, [Validators.required]],
+    });
   }
 
   closeModal() {
